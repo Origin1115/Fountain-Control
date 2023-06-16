@@ -1,0 +1,129 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/grey"
+    android:padding="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:weightSum="5">
+
+        <EditText
+            android:id="@+id/command_edittext"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:hint="@string/command_hint"
+            android:imeOptions="actionSend" />
+
+        <Button
+            android:id="@+id/send_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="sendCommand"
+            android:text="@string/button_send" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btn_area1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        >
+
+        <Button
+            android:layout_height="50dp"
+            android:text="@string/PlaySeq"
+            android:id="@+id/btn_play"
+            android:layout_width="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/button_border"/>
+        <Button
+            android:layout_height="50dp"
+            android:text="@string/StopSeq"
+            android:id="@+id/btn_stop"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_border"
+            android:layout_width="match_parent"/>
+        <Button
+            android:layout_height="50dp"
+            android:text="@string/PlayAll"
+            android:id="@+id/btn_playall"
+            android:layout_width="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_border"/>
+        <Button
+            android:layout_height="50dp"
+            android:text="@string/RandomPlay"
+            android:id="@+id/btn_playrandome"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_border"
+            android:layout_width="match_parent"/>
+        <Button
+            android:layout_height="50dp"
+            android:text="@string/CreateSeq"
+            android:id="@+id/btn_create"
+            android:layout_width="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_border"/>
+        <Button
+            android:layout_height="50dp"
+            android:text="@string/DeleteSeq"
+            android:id="@+id/btn_delete"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/button_border"
+            android:layout_width="match_parent"/>
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/white"
+        android:text="Loaded Sequences"/>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/seqlist"
+        android:background="@android:color/transparent"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="#000000"
+        android:dividerHeight="1dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:choiceMode="singleChoice"
+        />
+<!--    <TextView-->
+<!--        android:id="@+id/log_textview"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="200dp"-->
+<!--        android:clickable="false"-->
+<!--        android:enabled="true"-->
+<!--        android:scrollbars="vertical"-->
+<!--        android:background="@drawable/border"-->
+<!--        android:textColor="@android:color/white"-->
+<!--        />-->
+
+
+</LinearLayout>
